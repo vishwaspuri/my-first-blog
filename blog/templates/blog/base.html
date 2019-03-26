@@ -12,6 +12,9 @@
     		{% if user.is_authenticated %}
     			<a href="{% url 'post_new' %}" class="top-menu"><h1>New</h1></a>
     		{% endif %}
+            {% if user.is_authenticated %}
+                <a href="{% url 'post_draft_list' %}" class="top-menu"><h1>Draft</h1></a>
+            {% endif %}
     		<h1><a href="/">Django Girls Blog</a></h1>
     	</div>
     	<div class="content container">
